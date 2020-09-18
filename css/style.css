@@ -1,0 +1,292 @@
+/* Fonts */
+
+
+/* roboto-regular - latin_cyrillic */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('Roboto-Regular'), url('../fonts/roboto-v20-latin_cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/roboto-v20-latin_cyrillic-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+/* roboto-500 - latin_cyrillic */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Roboto Medium'), local('Roboto-Medium'), url('../fonts/roboto-v20-latin_cyrillic-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/roboto-v20-latin_cyrillic-500.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+/* roboto-700 - latin_cyrillic */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Roboto Bold'), local('Roboto-Bold'), url('../fonts/roboto-v20-latin_cyrillic-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/roboto-v20-latin_cyrillic-700.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+:root {
+    --basic-black: #000000;
+    --basic-black-transparent: rgba(0, 0, 0, 0.3);
+    --basic-extra-dark: #283136;
+    --basic-dark: #444444;
+    --basic-light: #666666;
+    --basic-neutral: #eeeeee;
+    --basic-neutral-dark: #e1e1e1;
+    --basic-white: #ffffff;
+    --basic-white-transparent: rgba(255, 255, 255, 0.3);
+    --basic-red: #fb565a;
+    --basic-dark-red: #E74246;
+    --basic-extra-dark-red: #D7373B;
+    --basic-green: #00ca74;
+    --basic-dark-green: #00BC6C;
+    --basic-extra-dark-green: #00AA62;
+    --basic-yellow: #efc849;
+    --basic-dark-yellow: #EAB534;
+    --basik-extra-dark-yellow: #E5A722;
+}
+
+
+/* Global */
+
+.page-body {
+    min-width: 1440px;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--basic-extra-dark);
+    background-color: var(--basic-white);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.main-header {
+    background-color: var(--basic-neutral);
+}
+
+.visually-hidden {
+    visibility: hidden;
+}
+
+
+/* Main navigation */
+
+.main-navigation {
+    font-weight: 500;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: var(--basic-black);
+}
+
+.site-navigation,
+.cart {
+    list-style: none;
+}
+
+.site-navigation a,
+.cart a {
+    color: var(--basic-black)
+}
+
+.site-navigation a:active,
+.cart a:active {
+    color: var(--basic-black-transparent)
+}
+
+
+/* Advantages */
+
+.advantages {
+    background-color: var(--basic-neutral);
+}
+
+.advantage-item {
+    list-style: none;
+}
+
+.advantage-header {
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 55px;
+    color: var(--basic-black);
+}
+
+
+/* Button */
+
+.button {
+    font-weight: 500;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.advantages-slider-button,
+.service-item-button,
+.contacts-button {
+    color: var(--basic-white);
+    border-radius: 3px;
+}
+
+.advantages-slider-button,
+.service-item-button-web,
+.contacts-button {
+    background-color: var(--basic-red);
+}
+
+.advantages-slider-button:hover,
+.service-item-button-web:hover,
+.contacts-button:hover {
+    background-color: var(--basic-dark-red);
+}
+
+.advantages-slider-button a:active,
+.service-item-button a:active,
+.contacts-button a:active {
+    color: var(--basic-white-transparent);
+    background-color: var(--basic-extra-dark-red);
+}
+
+.service-item-button-apps {
+    background-color: var(--basic-green);
+}
+
+.service-item-button-apps:hover {
+    background-color: var(--basic-dark-green);
+}
+
+.service-item-button-apps:active {
+    background-color: var(--basic-extra-dark-green);
+}
+
+.service-item-button-presentations {
+    background-color: var(--basic-yellow);
+}
+
+.service-item-button-presentations:hover {
+    background-color: var(--basic-dark-yellow);
+}
+
+.service-item-button-presentations:active {
+    background-color: var(--basik-extra-dark-yellow);
+}
+
+
+/* Services */
+
+.services-list {
+    list-style: none;
+}
+
+.service-item h3 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: var(--basic-black);
+}
+
+
+/* About */
+
+.description {
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 45px;
+    color: var(--basic-black);
+}
+
+.about h4 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.description-list {
+    list-style-type: none;
+}
+
+.about-studio td {
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 64px;
+    color: var(--basic-black);
+}
+
+.about-studio th {
+    font-weight: inherit;
+    line-height: 18px;
+}
+
+.about-studio-levels span {
+    font-size: 26px;
+    line-height: 40px;
+}
+
+
+/* Footer */
+
+.contacts h5 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: var(--basic-black);
+}
+
+.contacts p {
+    line-height: 18px;
+    color: var(--basic-light);
+}
+
+.contacts-phone {
+    color: inherit;
+}
+
+.social-links-header {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 36px;
+    color: var(--basic-black);
+}
+
+.discount {
+    line-height: 22px;
+    color: var(--basic-dark);
+}
+
+.social-buttons-list {
+    list-style-type: none;
+}
+
+.social-button {
+    background: linear-gradient(0deg, var(--basic-neutral-dark), var(--basic-neutral-dark)), var(--basic-white);
+}
+
+.social-button:hover {
+    background: linear-gradient(0deg, var(--basic-dark-red), var(--basic-dark-red)), var(--basic-white);
+}
+
+.social-button:active {
+    background: linear-gradient(0deg, var(--basic-extra-dark-red), var(--basic-extra-dark-red)), var(--basic-white);
+}
