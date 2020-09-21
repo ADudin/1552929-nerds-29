@@ -142,53 +142,53 @@ img {
     text-align: center;
 }
 
-.advantages-slider-button,
-.service-item-button,
+.advantages-button,
+.service-button,
 .contacts-button {
     color: var(--basic-white);
     border-radius: 3px;
 }
 
-.advantages-slider-button,
-.service-item-button-web,
+.advantages-button,
+.service-button-web,
 .contacts-button {
     background-color: var(--basic-red);
 }
 
-.advantages-slider-button:hover,
-.service-item-button-web:hover,
+.advantages-button:hover,
+.service-button-web:hover,
 .contacts-button:hover {
     background-color: var(--basic-dark-red);
 }
 
-.advantages-slider-button a:active,
-.service-item-button a:active,
+.advantages-button a:active,
+.service-button a:active,
 .contacts-button a:active {
     color: var(--basic-white-transparent);
     background-color: var(--basic-extra-dark-red);
 }
 
-.service-item-button-apps {
+.service-button-apps {
     background-color: var(--basic-green);
 }
 
-.service-item-button-apps:hover {
+.service-button-apps:hover {
     background-color: var(--basic-dark-green);
 }
 
-.service-item-button-apps:active {
+.service-button-apps:active {
     background-color: var(--basic-extra-dark-green);
 }
 
-.service-item-button-presentations {
+.service-button-presentations {
     background-color: var(--basic-yellow);
 }
 
-.service-item-button-presentations:hover {
+.service-button-presentations:hover {
     background-color: var(--basic-dark-yellow);
 }
 
-.service-item-button-presentations:active {
+.service-button-presentations:active {
     background-color: var(--basik-extra-dark-yellow);
 }
 
