@@ -39,6 +39,11 @@
 :root {
     --basic-black: #000000;
     --basic-black-transparent: rgba(0, 0, 0, 0.3);
+    --basic-gray-transparent: rgba(0, 0, 0, 0.6);
+    --basic-pagination-gray: #dfdfdf;
+    --basic-pagination-dark-gray: #d5d5d5;
+    --basic-pagination-focus-background: rgba(0, 0, 0, 0.0001);
+    --basic-pagination-focus-border: #dbdbdb;
     --basic-extra-dark: #283136;
     --basic-dark: #444444;
     --basic-light: #666666;
@@ -140,30 +145,35 @@ img {
     line-height: 18px;
     text-transform: uppercase;
     text-align: center;
+    border: none;
 }
 
-.advantages-button,
-.service-button,
-.contacts-button {
+.advantages-slider-button,
+.service-item-button,
+.contacts-button,
+.purchase-button {
     color: var(--basic-white);
     border-radius: 3px;
 }
 
-.advantages-button,
+.advantages-slider-button,
 .service-button-web,
-.contacts-button {
+.contacts-button,
+.purchase-button {
     background-color: var(--basic-red);
 }
 
-.advantages-button:hover,
+.advantages-slider-button:hover,
 .service-button-web:hover,
-.contacts-button:hover {
+.contacts-button:hover,
+.purchase-button:hover {
     background-color: var(--basic-dark-red);
 }
 
-.advantages-button a:active,
-.service-button a:active,
-.contacts-button a:active {
+.advantages-slider-button a:active,
+.service-item-button a:active,
+.contacts-button a:active,
+.purchase-button:active {
     color: var(--basic-white-transparent);
     background-color: var(--basic-extra-dark-red);
 }
@@ -190,6 +200,30 @@ img {
 
 .service-button-presentations:active {
     background-color: var(--basik-extra-dark-yellow);
+}
+
+
+/* Catalog sort buttons */
+
+.sort-button {
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: var(--basic-black-transparent);
+    background-color: var(--basic-white);
+    border: none;
+}
+
+.sort-button:hover {
+    color: var(--basic-gray-transparent);
+}
+
+.sort-button:active {
+    color: var(--basic-black);
+}
+
+.sort-active {
+    color: var(--basic-black);
 }
 
 
@@ -241,6 +275,90 @@ img {
 .about-studio-levels span {
     font-size: 26px;
     line-height: 40px;
+}
+
+
+/* Catalog */
+
+.page-title {
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 55px;
+    color: var(--basic-black);
+}
+
+.sort-header {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: var(--basic-black);
+}
+
+.sort-list {
+    list-style-type: none;
+}
+
+.models-list {
+    list-style-type: none;
+}
+
+.model-name {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: var(--basic-black);
+}
+
+.model-description {
+    line-height: 18px;
+    color: var(--basic-light)
+}
+
+.pagination-list {
+    list-style-type: none;
+}
+
+.pagination-item a,
+.pagination-button,
+.pagination-item a:hover,
+.pagination-item a:focus,
+.pagination-item a:active {
+    font-weight: 500;
+    line-height: 18px;
+    color: var(--basic-black);
+    border-radius: 3px;
+    border: none;
+}
+
+.pagination-item a:active {
+    color: var(--basic-black-transparent);
+}
+
+.pagination-item a,
+.pagination-button {
+    background-color: var(--basic-neutral)
+}
+
+.pagination-item a:hover,
+.pagination-item a:focus,
+.pagination-button:hover,
+.pagination-button:focus {
+    background-color: var(--basic-pagination-gray);
+}
+
+.pagination-item a:active,
+.pagination-button:active {
+    background-color: var(--basic-pagination-dark-gray);
+}
+
+.current-page a,
+.current-page a:hover,
+.current-page a:focus,
+.current-page a:active {
+    background-color: var(--basic-pagination-focus-background);
+    border: 3px solid var(--basic-pagination-focus-border);
 }
 
 

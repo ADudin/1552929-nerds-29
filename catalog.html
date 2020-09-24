@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="page-body inner-page">
 
     <header class="main-header">
 
@@ -31,11 +31,11 @@
 
     <main>
 
-        <h1>Магазин готовых шаблонов</h1>
+        <h1 class="page-title">Магазин готовых шаблонов</h1>
 
         <section>
 
-            <h2>Фильтр товаров</h2>
+            <h2 class="visually-hidden">Фильтр товаров</h2>
 
             <!-- Здесь будет форма фильтра -->
 
@@ -43,93 +43,95 @@
 
         <section>
 
-            <p>Сортировать:</p>
+            <p class="sort-header">Сортировать:</p>
 
-            <ul>
+            <ul class="sort-list">
                 <li>
-                    <button type="button">По цене</button>
+                    <button type="button" class="sort-button sort-active">По цене</button>
                 </li>
                 <li>
-                    <button type="button">По типу</button>
+                    <button type="button" class="sort-button">По типу</button>
                 </li>
                 <li>
-                    <button type="button">По названию</button>
+                    <button type="button" class="sort-button">По названию</button>
                 </li>
             </ul>
 
-            <ul>
+            <ul class="sort-list">
                 <li>
-                    <button type="button"><!-- стрелка вниз --></button>
+                    <button type="button" class="sort-button sort-active"><!-- стрелка вниз --></button>
                 </li>
                 <li>
-                    <button type="button"><!-- стрелка вверх --></button>
+                    <button type="button" class="sort-button"><!-- стрелка вверх --></button>
                 </li>
             </ul>
 
-            <h2>Список готовых шаблонов</h2>
+            <h2 class="visually-hidden">Список готовых шаблонов</h2>
 
-            <ul>
-                <li>
+            <ul class="models-list">
+                <li class="model-item">
                     <div>
                         <img src="https://via.placeholder.com/358x576" width="358" height="576" alt="Шаблон информационного сайта SEDONA">
-                        <h3>Sedona</h3>
-                        <p>Информационный сайт<br> для туристов</p>
-                        <button type="button">9 900 <span>&#8381;</span></button>
+                        <h3 class="model-name">Sedona</h3>
+                        <p class="model-description">Информационный сайт<br> для туристов</p>
+                        <button type="button" class="button purchase-button">9 900 <span>&#8381;</span></button>
                     </div>
                 </li>
-                <li>
+                <li class="model-item">
                     <div>
                         <img src="https://via.placeholder.com/358x576" width="358" height="576" alt="Шаблон приложения PINK APP">
-                        <h3>Pink APP</h3>
-                        <p>Прдуктовый лендинг<br> приложения для iOS и Android</p>
-                        <button type="button">9 900 <span>&#8381;</span></button>
+                        <h3 class="model-name">Pink APP</h3>
+                        <p class="model-description">Прдуктовый лендинг<br> приложения для iOS и Android</p>
+                        <button type="button" class="button purchase-button">9 900 <span>&#8381;</span></button>
                     </div>
                 </li>
-                <li>
+                <li class="model-item">
                     <div>
                         <img src="https://via.placeholder.com/358x576" width="358" height="576" alt="Шаблон сайта барбершопа «Бородинский»">
-                        <h3>Barbershop</h3>
-                        <p>Сайт салона красоты.<br> Для мужчин, да.</p>
-                        <button type="button">9 900 <span>&#8381;</span></button>
+                        <h3 class="model-name">Barbershop</h3>
+                        <p class="model-description">Сайт салона красоты.<br> Для мужчин, да.</p>
+                        <button type="button" class="button purchase-button">9 900 <span>&#8381;</span></button>
                     </div>
                 </li>
-                <li>
+                <li class="model-item">
                     <div>
                         <img src="https://via.placeholder.com/358x576" width="358" height="576" alt="Шаблон сайта интернет-магазина MISHKA">
-                        <h3>Mishka</h3>
-                        <p>Интернет-магазин<br> вязаных игрушек</p>
-                        <button type="button">9 900 <span>&#8381;</span></button>
+                        <h3 class="model-name">Mishka</h3>
+                        <p class="model-description">Интернет-магазин<br> вязаных игрушек</p>
+                        <button type="button" class="button purchase-button">9 900 <span>&#8381;</span></button>
                     </div>
                 </li>
-                <li>
+                <li class="model-item">
                     <div>
                         <img src="https://via.placeholder.com/358x576" width="358" height="576" alt="Шаблон сайта курсов повышения квалификации A PLUS">
-                        <h3>A Plus</h3>
-                        <p>Лендинг курсов повышения<br> квалификации</p>
-                        <button type="button">9 900 <span>&#8381;</span></button>
+                        <h3 class="model-name">A Plus</h3>
+                        <p class="model-description">Лендинг курсов повышения<br> квалификации</p>
+                        <button type="button" class="button purchase-button">9 900 <span>&#8381;</span></button>
                     </div>
                 </li>
-                <li>
+                <li class="model-item">
                     <div>
                         <img src="https://via.placeholder.com/358x576" width="358" height="576" alt="Шаблон сайта производителя кваса">
-                        <h3>Кваст</h3>
-                        <p>Промо-сайт производителя крафтового кваса<br> приложения для iOS и Android</p>
-                        <button type="button">9 900 <span>&#8381;</span></button>
+                        <h3 class="model-name">Кваст</h3>
+                        <p class="model-description">Промо-сайт производителя крафтового кваса<br> приложения для iOS и Android</p>
+                        <button type="button" class="button purchase-button">9 900 <span>&#8381;</span></button>
                     </div>
                 </li>
             </ul>
 
-            <ul>
-                <li>
+            <ul class="pagination-list">
+                <li class="pagination-item current-page">
                     <a href=" ">1</a>
                 </li>
-                <li>
+                <li class="pagination-item">
                     <a href=" ">2</a>
                 </li>
-                <li>
+                <li class="pagination-item">
                     <a href=" ">3</a>
                 </li>
             </ul>
+
+            <button type="button" class="pagination-button">Следующая</button>
 
         </section>
 
