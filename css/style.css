@@ -295,11 +295,12 @@ img {
     color: var(--basic-black);
 }
 
-.sort-list {
+.sort-list,
+.sort-arrows {
     list-style-type: none;
 }
 
-.models-list {
+.samoles-list {
     list-style-type: none;
 }
 
