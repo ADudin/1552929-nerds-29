@@ -278,6 +278,13 @@ img {
 }
 
 
+/* Companies-logo */
+
+.companies-logo {
+    list-style-type: none;
+}
+
+
 /* Catalog */
 
 .page-title {
@@ -300,11 +307,11 @@ img {
     list-style-type: none;
 }
 
-.samoles-list {
+.samples-list {
     list-style-type: none;
 }
 
-.model-name {
+.sample-name {
     font-weight: bold;
     font-size: 18px;
     line-height: 30px;
@@ -312,7 +319,7 @@ img {
     color: var(--basic-black);
 }
 
-.model-description {
+.sample-description {
     line-height: 18px;
     color: var(--basic-light)
 }
