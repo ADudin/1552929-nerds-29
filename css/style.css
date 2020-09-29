@@ -401,18 +401,18 @@ img {
     color: var(--basic-dark);
 }
 
-.social-buttons-list {
+.social-links-list {
     list-style-type: none;
 }
 
-.social-button {
+.social-link {
     background: linear-gradient(0deg, var(--basic-neutral-dark), var(--basic-neutral-dark)), var(--basic-white);
 }
 
-.social-button:hover {
+.social-link:hover {
     background: linear-gradient(0deg, var(--basic-dark-red), var(--basic-dark-red)), var(--basic-white);
 }
 
-.social-button:active {
+.social-link:active {
     background: linear-gradient(0deg, var(--basic-extra-dark-red), var(--basic-extra-dark-red)), var(--basic-white);
 }
