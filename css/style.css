@@ -343,12 +343,15 @@ img {
 
 /* Catalog */
 
+.title-block {
+    background-color: var(--basic-neutral);
+}
+
 .page-title {
     font-weight: 500;
     font-size: 55px;
     line-height: 55px;
     color: var(--basic-black);
-    background-color: var(--basic-neutral);
 }
 
 .sort-header {
