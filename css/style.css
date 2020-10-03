@@ -90,6 +90,11 @@ img {
     background-color: var(--basic-neutral);
 }
 
+.container {
+    margin-left: 140px;
+    margin-right: 140px;
+}
+
 .visually-hidden {
     visibility: hidden;
 }
