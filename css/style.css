@@ -114,6 +114,43 @@ img {
 }
 
 
+/* Grid for catalog */
+
+.catalog-block .container {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    column-gap: 140px;
+    align-content: start;
+}
+
+.sort-block {
+    display: grid;
+    grid-template-columns: 358px 358px;
+    column-gap: 40px;
+    align-content: start;
+}
+
+.sort-criterions {
+    display: grid;
+    grid-template-columns: 272px 40px;
+    align-content: start;
+}
+
+.samples-list {
+    display: grid;
+    grid-template-columns: 360px 360px;
+    column-gap: 40px;
+    align-content: start;
+    margin: 0;
+    padding: 0;
+}
+
+.sort-list {
+    margin: 0;
+    padding: 0;
+}
+
+
 /* Main navigation */
 
 .main-navigation {
@@ -311,6 +348,7 @@ img {
     font-size: 55px;
     line-height: 55px;
     color: var(--basic-black);
+    background-color: var(--basic-neutral);
 }
 
 .sort-header {
