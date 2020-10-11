@@ -124,20 +124,6 @@ a {
     align-content: start;
 }
 
-.sort-block {
-    display: grid;
-    grid-template-columns: 358px 358px;
-    column-gap: 40px;
-    align-content: start;
-}
-
-.sort-criterions {
-    padding: 60px 0 55px;
-    display: grid;
-    grid-template-columns: 272px 40px;
-    align-content: start;
-}
-
 .samples-list {
     display: grid;
     grid-template-columns: 360px 360px;
@@ -147,17 +133,44 @@ a {
     padding: 0;
 }
 
-.sort-list {
-    margin: 0;
-    padding: 0;
-}
-
 
 /* Flex */
 
 .main-header .container {
+    margin-top: 49px;
     display: flex;
     align-items: flex-end;
+}
+
+.sort-block {
+    padding: 55px 0 48px;
+    display: flex;
+}
+
+.sort-criterions {
+    width: 360px;
+    margin-left: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sort-list,
+.sort-arrows {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sort-list {
+    flex-grow: 1;
+}
+
+.sort-arrows {
+    width: 40px;
+    margin-left: 47px;
 }
 
 
@@ -174,12 +187,10 @@ a {
     text-transform: uppercase;
     color: var(--basic-black);
     width: 100%;
-    padding-top: 75px;
     margin-left: 202px;
     margin-bottom: 9px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
 }
 
 .site-navigation {
@@ -458,15 +469,9 @@ a {
 /* Catalog */
 
 .title-block {
-    display: flex;
-    justify-content: center;
     background-color: var(--basic-neutral);
-}
-
-.title-block .container {
-    width: 727px;
-    margin: 0px;
     padding-bottom: 108px;
+    text-align: center;
 }
 
 .page-title {
@@ -480,26 +485,13 @@ a {
 }
 
 .sort-header {
+    width: 360px;
     margin: 0px;
-    padding: 55px 0 48px;
     font-weight: bold;
     font-size: 18px;
     line-height: 30px;
     text-transform: uppercase;
     color: var(--basic-black);
-}
-
-.sort-list,
-.sort-arrows {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.sort-arrows {
-    margin: 0px;
-    padding-left: 47px;
 }
 
 .samples-list {
