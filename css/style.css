@@ -39,6 +39,7 @@
 :root {
     --basic-black: #000000;
     --basic-black-transparent: rgba(0, 0, 0, 0.3);
+    --basic-shadow: rgba(0, 0, 0, 0.4);
     --basic-gray-transparent: rgba(0, 0, 0, 0.6);
     --basic-pagination-gray: #dfdfdf;
     --basic-pagination-dark-gray: #d5d5d5;
@@ -52,6 +53,7 @@
     --basic-white: #ffffff;
     --basic-white-transparent: rgba(255, 255, 255, 0.3);
     --basic-red: #fb565a;
+    --basic-popup-close-button: rgba(251, 86, 90, 0.3);
     --basic-dark-red: #E74246;
     --basic-extra-dark-red: #D7373B;
     --basic-green: #00ca74;
@@ -876,4 +878,100 @@ a {
 
 .instagram {
     padding: 30px;
+}
+
+
+/* Popup */
+
+.popup {
+    display: none;
+    width: min-content;
+    margin: auto;
+    position: fixed;
+    left: 240px;
+    right: 240px;
+    bottom: 180px;
+    padding: 0 99px 84px 100px;
+    background-color: var(--basic-white);
+    box-shadow: 0px 20px 40px var(--basic-shadow);
+}
+
+.popup-header {
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 53px;
+    margin: 63px 0px 0px 0px;
+    padding: 0px;
+    color: var(--basic-black)
+}
+
+.popup label {
+    font-weight: bold;
+    line-height: 18px;
+}
+
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 37px;
+    color: var(--basic-black)
+}
+
+.name-field,
+.email-field {
+    width: 360px;
+}
+
+.form-container input,
+.form-container textarea {
+    box-sizing: border-box;
+    margin: 9px 0px 0px 0px;
+    color: var(--basic-dark);
+    opacity: 0.5;
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+    opacity: 1;
+}
+
+.name-field input,
+.email-field input {
+    width: 360px;
+    padding: 16px 14px 16px 16px;
+}
+
+.comment-field {
+    margin: 34px 0px 0px 0px;
+}
+
+.comment-field textarea {
+    width: 760px;
+    padding: 16px 414px 84px 16px;
+}
+
+.form-button {
+    font-weight: 500;
+    line-height: 18px;
+    text-transform: uppercase;
+    margin: 47px 0px 0px 0px;
+    color: var(--basic-white);
+    padding: 17px 83px 15px 83px;
+    background-color: var(--basic-red);
+    border-radius: 3px;
+    border: 0;
+    cursor: pointer;
+}
+
+.popup-close {
+    position: absolute;
+    top: 78px;
+    right: 90px;
+    width: 21px;
+    height: 21px;
+    border: 0;
+    background-color: transparent;
+    background-image: url("img/popup-close.svg");
+    cursor: pointer;
 }
