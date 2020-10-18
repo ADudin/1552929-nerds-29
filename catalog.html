@@ -19,7 +19,7 @@
                 <ul class="site-navigation">
                     <li><a href="index.html">Студия</a></li>
                     <li><a href=" ">Клиенты</a></li>
-                    <li><a href="">Магазин</a></li>
+                    <li class="active-list"><a href="">Магазин</a></li>
                     <li><a href=" ">Контакты</a></li>
                 </ul>
                 <ul class="cart">
@@ -68,10 +68,20 @@
 
                         <ul class="sort-arrows">
                             <li>
-                                <button type="button" class="sort-button sort-active"><!-- стрелка вниз --></button>
+                                <button type="button" class="sort-button sort-down active-arrow" area-label="сортировка сверху-вниз">
+                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.5 10L0 0H11" fill="#231F20"/>
+                                    </svg>
+                                </button>
                             </li>
                             <li>
-                                <button type="button" class="sort-button"><!-- стрелка вверх --></button>
+                                <button type="button" class="sort-button sort-up" area-label="сортировка снизу-вверх">
+                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g opacity="0.2">
+                                        <path d="M5.5 0L0 10H11L5.5 0Z" fill="#A6A6A6"/>
+                                        </g>
+                                    </svg>
+                                </button>
                             </li>
                         </ul>
 
@@ -184,17 +194,17 @@
                     </div>
                     <ul class="social-list">
                         <li>
-                            <a class="social-link" href=" ">
+                            <a class="social-link vk" href=" ">
                                 <img src="img/vk-icon.svg" width="26" height="15" alt="Вконтакте">
                             </a>
                         </li>
                         <li>
-                            <a class="social-link" href=" ">
+                            <a class="social-link facebook" href=" ">
                                 <img src="img/fb-icon.svg" width="12" height="22" alt="Facebook">
                             </a>
                         </li>
                         <li>
-                            <a class="social-link" href=" ">
+                            <a class="social-link instagram" href=" ">
                                 <img src="img/insta-icon.svg" width="21" height="21" alt="Instagram">
                             </a>
                         </li>
