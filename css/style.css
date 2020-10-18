@@ -230,22 +230,38 @@ a {
     background-position: right;
 }
 
-.slider-wrapper-1 {
-    background-image: url("img/nerds-index-slide-1.png");
-}
-
-.slider-wrapper-2 {
-    background-image: url("img/nerds-index-slide-2.png");
-}
-
-.slider-wrapper-3 {
-    background-image: url("img/nerds-index-slide-3.png");
+.slader-wrapper {
+    position: relative;
 }
 
 .slider-list {
     list-style: none;
     margin: 0px;
     padding: 0px;
+}
+
+.slider-list li:first-child::after,
+.slider-list li:nth-child(2)::after,
+.slider-list li:nth-child(3)::after {
+    content: "";
+    width: 760px;
+    height: 431px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-repeat: no-repeat;
+}
+
+.slider-list li:first-child::after {
+    background-image: url("img/nerds-index-slide-1.png");
+}
+
+.slider-list li:nth-child(2)::after {
+    background-image: url("img/nerds-index-slide-2.png");
+}
+
+.slider-list li:nth-child(3)::after {
+    background-image: url("img/nerds-index-slide-3.png");
 }
 
 .advantage-item {
@@ -356,7 +372,6 @@ a {
 }
 
 .advantages-button {
-    display: inline-block;
     padding: 17px 54px 15px 54px;
 }
 
@@ -373,7 +388,6 @@ a {
 }
 
 .service-button {
-    display: inline-block;
     padding: 17px 40px 15px 39px;
     margin-top: 32px;
 }
@@ -442,6 +456,7 @@ a {
     padding-right: 0px;
     margin: 0px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -464,33 +479,24 @@ a {
     margin: 16px 0px 0px 0px;
 }
 
-.service-item:first-child::before {
+.service-item::before {
     content: "";
     position: absolute;
     width: 300px;
     height: 146px;
     left: 0px;
     top: 0px;
+}
+
+.service-item:first-child::before {
     background-image: url("img/illustration-1.png");
 }
 
 .service-item:nth-child(2)::before {
-    content: "";
-    position: absolute;
-    width: 300px;
-    height: 146px;
-    left: 0px;
-    top: 0px;
     background-image: url("img/illustration-2.png");
 }
 
 .service-item:nth-child(3)::before {
-    content: "";
-    position: absolute;
-    width: 300px;
-    height: 146px;
-    left: 0px;
-    top: 0px;
     background-image: url("img/illustration-3.png");
 }
 
@@ -551,11 +557,14 @@ a {
     list-style-type: none;
     padding-left: 32px;
     margin: 23px 0px 0px 0px;
-    position: relative;
     min-height: 120px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.description-list li {
+    position: relative;
 }
 
 .description-list li::before {
@@ -563,8 +572,8 @@ a {
     position: absolute;
     width: 25px;
     height: 2px;
-    left: 0px;
-    transform: translate(0, 11px);
+    left: -32px;
+    top: 11px;
     background-color: var(--basic-red);
 }
 
@@ -623,9 +632,10 @@ a {
 .companies-logo {
     list-style-type: none;
     margin: 0px;
-    padding: 46px 0 44px;
+    padding: 46px 0 34px;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -635,18 +645,35 @@ a {
     justify-content: center;
     align-items: center;
     position: relative;
+}
+
+.companies-logo-item:first-child,
+.companies-logo-item:nth-child(4n+1),
+.companies-logo-item:nth-child(4n+4) {
+    width: 279px;
+}
+
+.companies-logo-item:first-child a {
+    padding-right: 15px;
+}
+
+.companies-logo-item:nth-child(4n+4) a {
+    padding-left: 25px;
+}
+
+.companies-logo-item a {
     opacity: 0.2;
 }
 
-.companies-logo-item:hover {
+.companies-logo-item a:hover {
     opacity: 1;
 }
 
-.companies-logo-item:active {
+.companies-logo-item a:active {
     opacity: 0.1;
 }
 
-.companies-logo-item:not(:last-child)::after {
+.companies-logo li:not(:nth-child(4n+4))::after {
     content: "";
     position: absolute;
     width: 2px;
@@ -842,13 +869,13 @@ a {
 }
 
 .adress-container {
-    width: 319px;
-    margin: 54px 0 54px;
+    margin: 54px 0px 54px 0px;
+    padding: 49px 50px 50px 50px;
     background-color: var(--basic-white);
 }
 
 .contacts h5 {
-    margin: 49px 0 0 50px;
+    margin: 0px;
     font-weight: bold;
     font-size: 18px;
     line-height: 30px;
@@ -857,7 +884,7 @@ a {
 }
 
 .contacts p {
-    margin: 23px 0 0 50px;
+    margin: 23px 0px 0px 0px;
     line-height: 18px;
     color: var(--basic-light);
 }
@@ -868,7 +895,7 @@ a {
 
 .contacts-button {
     padding: 17px 44px 15px 44px;
-    margin: 37px 0 50px 50px;
+    margin: 37px 0px 0px 0px;
 }
 
 .map-marker {
@@ -911,15 +938,19 @@ a {
     list-style-type: none;
     padding: 0px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
 }
 
 .social-link {
     width: 81px;
     height: 81px;
-    background: linear-gradient(0deg, var(--basic-neutral-dark), var(--basic-neutral-dark)), var(--basic-white);
     border-radius: 50%;
+    background: linear-gradient(0deg, var(--basic-neutral-dark), var(--basic-neutral-dark)), var(--basic-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .social-link:hover {
@@ -930,18 +961,6 @@ a {
     background: linear-gradient(0deg, var(--basic-extra-dark-red), var(--basic-extra-dark-red)), var(--basic-white);
 }
 
-.vk {
-    padding: 31px 28px 31px 27px;
-}
-
-.facebook {
-    padding: 32.5px 34px 29.5px 35px;
-}
-
-.instagram {
-    padding: 31px 30px 31px 30px;
-}
-
 
 /* Popup */
 
@@ -950,10 +969,11 @@ a {
     width: min-content;
     margin: auto;
     position: fixed;
+    bottom: 180px;
     left: 240px;
     right: 240px;
-    bottom: 180px;
-    padding: 0 99px 84px 100px;
+    z-index: 100;
+    padding: 63px 99px 84px 100px;
     background-color: var(--basic-white);
     box-shadow: 0px 20px 40px var(--basic-shadow);
 }
@@ -962,7 +982,7 @@ a {
     font-weight: bold;
     font-size: 45px;
     line-height: 53px;
-    margin: 63px 0px 0px 0px;
+    margin: 0px;
     padding: 0px;
     color: var(--basic-black)
 }
@@ -1035,5 +1055,14 @@ a {
     border: 0;
     background-color: transparent;
     background-image: url("img/popup-close.svg");
+    opacity: 0.3;
     cursor: pointer;
+}
+
+.popup-close:hover {
+    opacity: 1;
+}
+
+.popup-close:active {
+    opacity: 0.1;
 }
