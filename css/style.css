@@ -230,37 +230,30 @@ a {
     background-position: right;
 }
 
-.slader-wrapper {
-    position: relative;
-}
-
 .slider-list {
+    height: content;
     list-style: none;
     margin: 0px;
     padding: 0px;
+    position: relative;
 }
 
-.slider-list li:first-child::after,
-.slider-list li:nth-child(2)::after,
-.slider-list li:nth-child(3)::after {
-    content: "";
-    width: 760px;
-    height: 431px;
-    position: absolute;
-    top: 0px;
-    right: 0px;
+.slide {
+    width: 1160px;
+    min-height: 431px;
     background-repeat: no-repeat;
+    background-position: right;
 }
 
-.slider-list li:first-child::after {
+.first-slide {
     background-image: url("img/nerds-index-slide-1.png");
 }
 
-.slider-list li:nth-child(2)::after {
+.second-slide {
     background-image: url("img/nerds-index-slide-2.png");
 }
 
-.slider-list li:nth-child(3)::after {
+.third-slide {
     background-image: url("img/nerds-index-slide-3.png");
 }
 
@@ -280,13 +273,19 @@ a {
     color: var(--basic-black);
 }
 
-.advantage-item:first-child p:nth-child(2) {
+.first-slide p:nth-child(2) {
     margin: 25px 0px 0px 0px;
 }
 
-.advantage-item:nth-child(2) p:nth-child(2),
-.advantage-item:nth-child(3) p:nth-child(2) {
+.second-slide p:nth-child(2),
+.third-slide p:nth-child(2) {
     margin: 37px 0px 0px 0px;
+}
+
+.advantages-button {
+    position: absolute;
+    left: 0px;
+    bottom: 80px;
 }
 
 .slider-controls {
@@ -373,18 +372,6 @@ a {
 
 .advantages-button {
     padding: 17px 54px 15px 54px;
-}
-
-.advantage-item:first-child .button {
-    margin: 38px 0px 0px 0px;
-}
-
-.advantage-item:nth-child(2) .button {
-    margin: 27px 0px 0px 0px;
-}
-
-.advantage-item:nth-child(3) .button {
-    margin: 26px 0px 0px 0px;
 }
 
 .service-button {
