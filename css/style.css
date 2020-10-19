@@ -53,7 +53,6 @@
     --basic-white: #ffffff;
     --basic-white-transparent: rgba(255, 255, 255, 0.3);
     --basic-red: #fb565a;
-    --basic-popup-close-button: rgba(251, 86, 90, 0.3);
     --basic-dark-red: #E74246;
     --basic-extra-dark-red: #D7373B;
     --basic-green: #00ca74;
@@ -62,8 +61,8 @@
     --basic-yellow: #efc849;
     --basic-dark-yellow: #EAB534;
     --basik-extra-dark-yellow: #E5A722;
-    --basic-sort-arrow-static: rgba(166, 166, 166, 1);
-    --basic-sort-arrow-active: #231F20;
+    --basic-gray: rgba(166, 166, 166, 1);
+    --basic-black-active: #231F20;
 }
 
 
@@ -222,7 +221,7 @@ a {
 }
 
 .slider {
-    margin: 0px;
+    margin: 0px auto;
     padding: 0px;
     position: relative;
     min-height: 431px;
@@ -235,7 +234,12 @@ a {
     list-style: none;
     margin: 0px;
     padding: 0px;
-    position: relative;
+}
+
+.slider-list li {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
 }
 
 .slide {
@@ -257,12 +261,6 @@ a {
     background-image: url("img/nerds-index-slide-3.png");
 }
 
-.advantage-item {
-    list-style: none;
-    margin: 0px;
-    padding: 0px;
-}
-
 .advantage-header {
     margin: 0px;
     padding-top: 78px;
@@ -280,12 +278,6 @@ a {
 .second-slide p:nth-child(2),
 .third-slide p:nth-child(2) {
     margin: 37px 0px 0px 0px;
-}
-
-.advantages-button {
-    position: absolute;
-    left: 0px;
-    bottom: 80px;
 }
 
 .slider-controls {
@@ -372,6 +364,20 @@ a {
 
 .advantages-button {
     padding: 17px 54px 15px 54px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.first-slide .advantages-button {
+    margin-top: 38px;
+}
+
+.second-slide .advantages-button {
+    margin-top: 27px;
+}
+
+.third-slide .advantages-button {
+    margin-top: 26px;
 }
 
 .service-button {
@@ -746,7 +752,7 @@ a {
 
 .sort-down path,
 .sort-up path {
-    fill: var(--basic-sort-arrow-static);
+    fill: var(--basic-gray);
 }
 
 .active-arrow g,
@@ -760,7 +766,7 @@ a {
 .active-arrow path,
 .sort-down:active path,
 .sort-up:active path {
-    fill: var(--basic-sort-arrow-active);
+    fill: var(--basic-black-active);
 }
 
 .samples-list {
