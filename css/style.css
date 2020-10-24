@@ -38,8 +38,11 @@
 
 :root {
     --basic-black: #000000;
+    --basic-light-black: #283136;
     --basic-black-transparent: rgba(0, 0, 0, 0.3);
     --basic-shadow: rgba(0, 0, 0, 0.4);
+    --basic-extra-light-shadow: rgba(0, 1, 1, 0.1);
+    --basic-light-shadow: rgba(0, 0, 0, 0.15);
     --basic-gray-transparent: rgba(0, 0, 0, 0.6);
     --basic-pagination-gray: #dfdfdf;
     --basic-pagination-dark-gray: #d5d5d5;
@@ -63,6 +66,10 @@
     --basik-extra-dark-yellow: #E5A722;
     --basic-gray: rgba(166, 166, 166, 1);
     --basic-black-active: #231F20;
+    --basic-extra-dark-gray: rgba(77, 77, 77, 1);
+    --basic-extra-dark-gray-transparent: rgba(77, 77, 77, 0.12);
+    --basic-gray-blue: #D7DCDF;
+    --basic-asphalt-gray: #ABABAB;
 }
 
 
@@ -99,6 +106,7 @@ a {
 
 .visually-hidden {
     visibility: hidden;
+    width: 0px;
     height: 0px;
     margin: 0px;
 }
@@ -694,6 +702,9 @@ a {
     text-align: center;
 }
 
+
+/* Filters */
+
 .page-title {
     margin: 0px;
     font-weight: 500;
@@ -702,14 +713,248 @@ a {
     color: var(--basic-black);
 }
 
+.filter {
+    width: 260px;
+}
+
+.filters fieldset {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 30px;
+    border: none;
+}
+
+.filters fieldset:first-child {
+    margin-top: 55px;
+}
+
+.filters .grid {
+    margin-top: 54px;
+}
+
+.filters .characteristics {
+    margin-top: 43px;
+}
+
+.filter legend {
+    margin-bottom: 16px;
+}
+
+.range-filter {
+    width: 260px;
+    margin-top: 32px;
+}
+
+.filter ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.filter-option {
+    margin-bottom: 14px;
+    padding-left: 36px;
+}
+
+.filter-option label {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+}
+
+.grid label,
+.characteristics label {
+    line-height: 19px;
+    color: var(--basic-light-black);
+}
+
+.filter-input-radio+label::before {
+    content: "";
+    position: absolute;
+    top: -2.5px;
+    left: -36px;
+    width: 17px;
+    height: 17px;
+    background-color: var(--basic-white);
+    border: 4px solid var(--basic-extra-dark-gray);
+    border-radius: 50%;
+}
+
+.filter-input-checkbox+label::before {
+    content: "";
+    position: absolute;
+    top: -2.5px;
+    left: -36px;
+    width: 19px;
+    height: 19px;
+    border: 2px solid var(--basic-extra-dark-gray);
+    border-radius: 3px;
+}
+
+.filter-input-radio+label::before,
+.filter-input-checkbox+label::before {
+    opacity: 0.4;
+}
+
+.filter-input-radio+label:hover::before,
+.filter-input-radio+label:active::before,
+.filter-input-checkbox+label:hover::before,
+.filter-input-checkbox+label:active::before {
+    opacity: 1;
+}
+
+.filter-input-checkbox:checked+label::before,
+.filter-input-radio:checked+label::before {
+    border: none;
+}
+
+.filter-input-radio:checked+label::after {
+    content: "";
+    position: absolute;
+    top: -2.5px;
+    left: -36px;
+    width: 25px;
+    height: 25px;
+    background-image: url("img/radio-on.svg");
+}
+
+.filter-input-checkbox:checked+label::after {
+    content: "";
+    position: absolute;
+    top: -2.5px;
+    left: -36px;
+    width: 25px;
+    height: 23px;
+    background-image: url("img/checkbox-on.svg");
+}
+
+.filter-input-radio:checked+label::after,
+.filter-input-checkbox:checked+label::after {
+    opacity: 0.4;
+}
+
+.filter-input-radio:checked+label:hover::after,
+.filter-input-radio:checked+label:active::after,
+.filter-input-checkbox:checked+label:hover::after,
+.filter-input-checkbox:checked+label:active::after {
+    opacity: 1;
+}
+
+.filter-input-radio+label:disabled::before,
+.filter-input-checkbox+label:disabled::before,
+.filter-input-checkbox:checked+label:disabled::after {
+    opacity: 0.1;
+}
+
+.filter-item legend,
 .sort-header {
-    width: 360px;
-    margin: 0px;
     font-weight: bold;
     font-size: 18px;
     line-height: 30px;
     text-transform: uppercase;
     color: var(--basic-black);
+}
+
+.range-controls {
+    position: relative;
+    height: 41px;
+    margin-bottom: 14px;
+    padding: 39px 22px 0 33px;
+    background-color: var(--basic-neutral);
+    border-radius: 3px;
+}
+
+.range-controls .scale {
+    height: 2px;
+    background: var(--basic-gray-blue);
+}
+
+.range-controls .bar {
+    width: 70%;
+    height: 2px;
+    background-color: var(--basic-green);
+}
+
+.range-controls .toggle {
+    position: absolute;
+    top: 31px;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    padding: 0;
+    border: 8px solid var(--basic-white);
+    background-color: var(--basic-asphalt-gray);
+    border-radius: 50%;
+    box-shadow: 0px 2px 1px var(--basic-light-shadow);
+    cursor: pointer;
+}
+
+.range-controls .toggle-min {
+    left: 18px;
+}
+
+.range-controls .toggle-max {
+    left: 160px;
+}
+
+.price-controls {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-controls label {
+    line-height: 22px;
+    text-transform: uppercase;
+    color: var(--basic-light-black);
+}
+
+.price-controls input {
+    width: 80px;
+    padding: 8px 0 8px 0;
+    margin-left: 11px;
+    text-align: center;
+    color: var(--basic-light-black);
+    border: none;
+    border-radius: 3px;
+    background-color: var(--basic-neutral);
+    font-family: inherit;
+    font-size: inherit;
+}
+
+
+/* For Chrome */
+
+.price-controls input[type="number"]::-webkit-outer-spin-button,
+.price-controls input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* For Firefox */
+
+.price-controls input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.price-controls input[type="number"]:hover,
+.price-controls input[type="number"]:focus {
+    -moz-appearance: number-input;
+}
+
+
+/* For others */
+
+.price-controls input[type=number]::-webkit-inner-spin-button,
+.price-controls input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.sort-header {
+    width: 360px;
+    margin: 0px;
 }
 
 .sort-block {
@@ -773,17 +1018,78 @@ a {
     list-style-type: none;
 }
 
+.sample-item {
+    position: relative;
+}
+
+.sample-item:not(:nth-last-child(-n+2)) {
+    margin-bottom: 30px;
+}
+
+.sample-item::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: 13px;
+    left: 16px;
+    border-radius: 50%;
+    background-color: var(--basic-white);
+    box-shadow: 23px 0 0 var(--basic-white), 46px 0 0 var(--basic-white);
+    z-index: 4;
+}
+
+.sample-item img,
+.description-wrapper {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.sample-item img {
+    border-top: 40px solid var(--basic-extra-dark-gray-transparent);
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    position: relative;
+    z-index: 3;
+}
+
+.sample-item img:hover {
+    border-color: var(--basic-extra-dark-gray);
+    z-index: 1;
+}
+
+.description-wrapper {
+    width: 360px;
+    background-color: var(--basic-neutral);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 26px 0px 44px 0px;
+    position: absolute;
+    top: 389px;
+    z-index: 2;
+}
+
 .sample-name {
     font-weight: bold;
     font-size: 18px;
     line-height: 30px;
     text-transform: uppercase;
     color: var(--basic-black);
+    text-align: center;
+    margin: 0px;
 }
 
 .sample-description {
     line-height: 18px;
-    color: var(--basic-light)
+    color: var(--basic-light);
+    text-align: center;
+    margin: 12px 0px 0px 0px;
+}
+
+.purchase-button {
+    margin-top: 32px;
+    padding: 17px 72px 15px 72px;
 }
 
 .pagination-block {
@@ -798,6 +1104,27 @@ a {
     padding: 0px;
     display: flex;
     justify-content: flex-start;
+}
+
+.pagination-item {
+    margin-right: 11px;
+}
+
+.pagination-item a {
+    width: 50px;
+    height: 50px;
+}
+
+.pagination-button {
+    width: 260px;
+    height: 50px;
+}
+
+.pagination-item a,
+.pagination-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .pagination-item a,
@@ -832,14 +1159,16 @@ a {
 .pagination-item a:active,
 .pagination-button:active {
     background-color: var(--basic-pagination-dark-gray);
+    box-shadow: inset 0px 3px 0px var(--basic-extra-light-shadow);
 }
 
 .current-page a,
 .current-page a:hover,
 .current-page a:focus,
 .current-page a:active {
-    background-color: var(--basic-pagination-focus-background);
-    border: 3px solid var(--basic-pagination-focus-border);
+    background-color: var(--basic-white);
+    outline: 3px solid var(--basic-pagination-focus-border);
+    outline-offset: -3px;
 }
 
 
