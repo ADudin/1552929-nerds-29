@@ -1176,6 +1176,7 @@ a {
     color: var(--basic-black);
     border-radius: 3px;
     border: none;
+    cursor: pointer;
 }
 
 .pagination-item a:active {
