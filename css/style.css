@@ -87,6 +87,14 @@
     background-color: var(--basic-white);
 }
 
+.page-body main {
+    margin-bottom: 80px;
+}
+
+.inner-page main {
+    margin-bottom: 60px;
+}
+
 a {
     text-decoration: none;
 }
@@ -361,13 +369,13 @@ a {
     background-color: var(--basic-dark-red);
 }
 
-.advantages-button a:active,
-.service-button a:active,
-.contacts-button a:active,
+.advantages-button:active,
+.service-button:active,
+.contacts-button:active,
 .purchase-button:active {
     color: var(--basic-white-transparent);
     background-color: var(--basic-extra-dark-red);
-    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+    box-shadow: inset 0px 3px 0px var(--basic-extra-light-shadow);
 }
 
 .advantages-button {
@@ -698,7 +706,7 @@ a {
 
 .title-block {
     background-color: var(--basic-neutral);
-    padding-top: 10px;
+    padding-top: 7px;
     padding-bottom: 108px;
     text-align: center;
 }
@@ -730,11 +738,11 @@ a {
 }
 
 .filters .grid {
-    margin-top: 54px;
+    margin-top: 56px;
 }
 
 .filters .characteristics {
-    margin-top: 43px;
+    margin-top: 44px;
 }
 
 .filter legend {
@@ -753,8 +761,15 @@ a {
 }
 
 .filter-option {
-    margin-bottom: 14px;
-    padding-left: 36px;
+    padding-left: 33px;
+}
+
+.filter-radio:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.filter-checkbox:not(:last-child) {
+    margin-bottom: 15px;
 }
 
 .filter-option label {
@@ -959,6 +974,7 @@ a {
     width: 260px;
     min-height: 50px;
     text-align: center;
+    margin-top: 20px;
     padding: 0;
     background-color: var(--basic-neutral);
 }
@@ -1045,7 +1061,7 @@ a {
 }
 
 .sample-item:not(:nth-last-child(-n+2)) {
-    margin-bottom: 30px;
+    margin-bottom: 26px;
 }
 
 .sample-item::before {
@@ -1131,7 +1147,7 @@ a {
 }
 
 .pagination-block {
-    padding: 40px 0 0 0;
+    padding: 47px 0 0 0;
     display: flex;
     justify-content: flex-start;
 }
@@ -1198,6 +1214,7 @@ a {
 
 .pagination-item a:active,
 .pagination-button:active {
+    color: var(--basic-black-transparent);
     background-color: var(--basic-light-gray);
     box-shadow: inset 0px 3px 0px var(--basic-extra-light-shadow);
 }
@@ -1215,7 +1232,6 @@ a {
 /* Footer */
 
 .contacts {
-    margin: 80px 0px 0px 0px;
     background-image: url("img/map.jpg");
     width: 100%;
     height: 416px;
@@ -1281,7 +1297,7 @@ a {
 }
 
 .social-links-header {
-    margin: 0 0 10px;
+    margin: 6px 0 10px;
     font-weight: bold;
     font-size: 36px;
     line-height: 36px;
@@ -1321,6 +1337,11 @@ a {
 
 .social-link:active {
     background: linear-gradient(0deg, var(--basic-extra-dark-red), var(--basic-extra-dark-red)), var(--basic-white);
+    box-shadow: inset 0px 3px 0px var(--basic-extra-light-shadow);
+}
+
+.social-link:active img {
+    opacity: 0.3;
 }
 
 
