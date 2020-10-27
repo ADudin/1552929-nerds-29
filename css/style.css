@@ -1074,10 +1074,10 @@ a {
     border-radius: 50%;
     background-color: var(--basic-white);
     box-shadow: 23px 0 0 var(--basic-white), 46px 0 0 var(--basic-white);
-    z-index: 4;
 }
 
 .sample-item,
+.sample-item img,
 .description-wrapper {
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
@@ -1089,22 +1089,9 @@ a {
     border-top-left-radius: 4px;
 }
 
-.sample-item img {
-    position: relative;
-    z-index: 3;
-}
-
 .sample-item:hover {
     border-color: var(--basic-extra-dark-gray);
     box-shadow: 0px 6px 15px var(--basic-light-shadow);
-}
-
-.sample-item:hover img {
-    z-index: 1;
-}
-
-.sample-item:hover .description-wrapper {
-    z-index: 3;
 }
 
 .description-wrapper {
@@ -1117,11 +1104,11 @@ a {
     position: absolute;
     top: 349px;
     left: 0px;
-    z-index: 2;
+    opacity: 0;
 }
 
-.description-wrapper:hover {
-    z-index: 4;
+.sample-item:hover .description-wrapper {
+    opacity: 1;
 }
 
 .sample-name {
@@ -1173,21 +1160,20 @@ a {
 
 .pagination-item {
     margin-right: 11px;
-}
-
-.pagination-item a {
-    min-width: 50px;
-}
-
-.pagination-button {
-    min-width: 260px;
+    border-radius: 3px;
 }
 
 .pagination-item a,
 .pagination-button {
-    padding: 17px 0 15px 0;
-    display: flex;
-    justify-content: center;
+    display: inline-block;
+}
+
+.pagination-item a {
+    padding: 17px 20px 15px 20px;
+}
+
+.pagination-button {
+    padding: 17px 77px 15px 78px;
 }
 
 .pagination-item a,
@@ -1233,8 +1219,10 @@ a {
 .current-page a:focus,
 .current-page a:active {
     background-color: var(--basic-white);
-    outline: 3px solid var(--basic-neutral-extra-dark);
-    outline-offset: -3px;
+    border: 3px solid var(--basic-neutral-extra-dark);
+    padding: 14px 17px 12px 17px;
+    box-sizing: border-box;
+    box-shadow: none;
 }
 
 
