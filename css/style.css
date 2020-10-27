@@ -562,6 +562,12 @@ a {
     margin: 40px 0 0 0;
 }
 
+.levels-container img {
+    width: 360px;
+    height: 208px;
+    object-fit: contain;
+}
+
 .levels-container h4 {
     margin: 37px 0 0 0;
 }
@@ -1281,6 +1287,12 @@ a {
     position: absolute;
     right: 247px;
     top: 86px;
+}
+
+.map-marker img {
+    width: 231;
+    height: 190px;
+    object-fit: contain;
 }
 
 .social-container {
