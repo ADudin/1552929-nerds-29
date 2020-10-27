@@ -76,7 +76,6 @@
 /* Global */
 
 .page-body {
-    min-width: 1440px;
     margin: 0;
     padding: 0;
     font-family: "Roboto", arial, sans-serif;
@@ -114,9 +113,9 @@ a {
 
 .visually-hidden {
     visibility: hidden;
-    width: 0px;
-    height: 0px;
-    margin: 0px;
+    width: 0;
+    height: 0;
+    margin: 0;
 }
 
 
@@ -182,10 +181,13 @@ a {
 }
 
 .site-navigation {
-    width: 437px;
+    min-width: 437px;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.site-navigation li {
+    margin-right: 45px;
 }
 
 .cart li {
@@ -209,8 +211,8 @@ a {
 .site-navigation,
 .cart {
     list-style: none;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 .site-navigation a,
@@ -237,8 +239,8 @@ a {
 }
 
 .slider {
-    margin: 0px auto;
-    padding: 0px;
+    margin: 0 auto;
+    padding: 0;
     position: relative;
     min-height: 431px;
     background-repeat: no-repeat;
@@ -248,14 +250,14 @@ a {
 .slider-list {
     height: content;
     list-style: none;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 .slider-list li {
     list-style: none;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 .slide {
@@ -278,7 +280,7 @@ a {
 }
 
 .advantage-header {
-    margin: 0px;
+    margin: 0;
     padding-top: 78px;
     font-style: normal;
     font-weight: 500;
@@ -288,12 +290,12 @@ a {
 }
 
 .first-slide p:nth-child(2) {
-    margin: 25px 0px 0px 0px;
+    margin: 25px 0 0 0;
 }
 
 .second-slide p:nth-child(2),
 .third-slide p:nth-child(2) {
-    margin: 37px 0px 0px 0px;
+    margin: 37px 0 0 0;
 }
 
 .slider-controls {
@@ -429,7 +431,7 @@ a {
 /* Catalog sort buttons */
 
 .sort-button {
-    padding: 0px;
+    padding: 0;
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
@@ -454,16 +456,16 @@ a {
 /* Services */
 
 .services {
-    padding: 80px 0 80px;
+    padding: 60px 0 80px;
     border-bottom: 2px solid var(--basic-neutral);
 }
 
 .services-list {
     width: 1100px;
     list-style: none;
-    padding-left: 0px;
-    padding-right: 0px;
-    margin: 0px;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -471,6 +473,7 @@ a {
 
 .service-item {
     width: 300px;
+    margin-top: 20px;
     position: relative;
 }
 
@@ -481,11 +484,11 @@ a {
     text-transform: uppercase;
     color: var(--basic-black);
     padding-top: 171px;
-    margin: 0px;
+    margin: 0;
 }
 
 .service-item p {
-    margin: 16px 0px 0px 0px;
+    margin: 16px 0 0 0;
 }
 
 .service-item::before {
@@ -493,8 +496,8 @@ a {
     position: absolute;
     width: 300px;
     height: 146px;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
 }
 
 .service-item:first-child::before {
@@ -519,11 +522,12 @@ a {
 .about-container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .description-container {
     padding: 73px 0 73px;
-    margin: 0px;
+    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -541,31 +545,31 @@ a {
     font-size: 45px;
     line-height: 45px;
     color: var(--basic-black);
-    margin: 0px;
+    margin: 0;
 }
 
 .description-container p:nth-child(2) {
-    margin: 32px 0px 0px 0px;
+    margin: 32px 0 0 0;
 }
 
 .about h4 {
     font-weight: bold;
     text-transform: uppercase;
-    padding: 0px;
+    padding: 0;
 }
 
 .description-container h4 {
-    margin: 40px 0px 0px 0px;
+    margin: 40px 0 0 0;
 }
 
 .levels-container h4 {
-    margin: 37px 0px 0px 0px;
+    margin: 37px 0 0 0;
 }
 
 .description-list {
     list-style-type: none;
     padding-left: 32px;
-    margin: 23px 0px 0px 0px;
+    margin: 23px 0 0 0;
     min-height: 120px;
     display: flex;
     flex-direction: column;
@@ -587,7 +591,7 @@ a {
 }
 
 .about-studio {
-    margin: 31px 0px 0px 0px;
+    margin: 31px 0 0 0;
 }
 
 .about-studio tbody {
@@ -597,7 +601,7 @@ a {
 
 .about-studio-levels {
     width: 310px;
-    margin: 0px 50px 0px 0px;
+    margin: 0 50px 0 0;
     display: flex;
     justify-content: space-between;
 }
@@ -640,7 +644,7 @@ a {
 
 .companies-logo {
     list-style-type: none;
-    margin: 0px;
+    margin: 0;
     padding: 46px 0 34px;
     display: flex;
     flex-wrap: wrap;
@@ -687,7 +691,7 @@ a {
     position: absolute;
     width: 2px;
     height: 52px;
-    right: 0px;
+    right: 0;
     background-color: var(--basic-neutral);
 }
 
@@ -715,7 +719,7 @@ a {
 /* Filters */
 
 .page-title {
-    margin: 0px;
+    margin: 0;
     font-weight: 500;
     font-size: 55px;
     line-height: 55px;
@@ -992,7 +996,7 @@ a {
 
 .sort-header {
     width: 360px;
-    margin: 0px;
+    margin: 0;
 }
 
 .sort-block {
@@ -1100,10 +1104,10 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 26px 0px 44px 0px;
+    padding: 26px 0 44px 0;
     position: absolute;
     top: 349px;
-    left: 0px;
+    left: 0;
     opacity: 0;
 }
 
@@ -1117,7 +1121,7 @@ a {
     line-height: 30px;
     text-transform: uppercase;
     text-align: center;
-    margin: 0px;
+    margin: 0;
 }
 
 .sample-name a {
@@ -1136,7 +1140,7 @@ a {
     line-height: 18px;
     color: var(--basic-light);
     text-align: center;
-    margin: 12px 0px 0px 0px;
+    margin: 12px 0 0 0;
 }
 
 .purchase-button {
@@ -1152,8 +1156,8 @@ a {
 
 .pagination-list {
     list-style-type: none;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: flex-start;
 }
@@ -1244,13 +1248,13 @@ a {
 }
 
 .adress-container {
-    margin: 54px 0px 54px 0px;
+    margin: 54px 0 54px 0;
     padding: 49px 50px 50px 50px;
     background-color: var(--basic-white);
 }
 
 .contacts h5 {
-    margin: 0px;
+    margin: 0;
     font-weight: bold;
     font-size: 18px;
     line-height: 30px;
@@ -1259,7 +1263,7 @@ a {
 }
 
 .contacts p {
-    margin: 23px 0px 0px 0px;
+    margin: 23px 0 0 0;
     line-height: 18px;
     color: var(--basic-light);
 }
@@ -1270,7 +1274,7 @@ a {
 
 .contacts-button {
     padding: 17px 44px 15px 44px;
-    margin: 37px 0px 0px 0px;
+    margin: 37px 0 0 0;
 }
 
 .map-marker {
@@ -1309,9 +1313,9 @@ a {
 
 .social-list {
     width: 261px;
-    margin: 0px;
+    margin: 0;
     list-style-type: none;
-    padding: 0px;
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -1362,8 +1366,8 @@ a {
     font-weight: bold;
     font-size: 45px;
     line-height: 53px;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     color: var(--basic-black)
 }
 
@@ -1388,7 +1392,7 @@ a {
 .form-container input,
 .form-container textarea {
     box-sizing: border-box;
-    margin: 9px 0px 0px 0px;
+    margin: 9px 0 0 0;
     color: var(--basic-dark);
     opacity: 0.5;
 }
@@ -1405,7 +1409,7 @@ a {
 }
 
 .comment-field {
-    margin: 34px 0px 0px 0px;
+    margin: 34px 0 0 0;
 }
 
 .comment-field textarea {
@@ -1417,7 +1421,7 @@ a {
     font-weight: 500;
     line-height: 18px;
     text-transform: uppercase;
-    margin: 47px 0px 0px 0px;
+    margin: 47px 0 0 0;
     color: var(--basic-white);
     padding: 17px 83px 15px 83px;
     background-color: var(--basic-red);
