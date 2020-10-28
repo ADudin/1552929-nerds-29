@@ -181,6 +181,10 @@ a {
     padding: 0;
 }
 
+.catalog-header-logo:active path {
+    fill: var(--basic-gray);
+}
+
 .main-navigation {
     font-weight: 500;
     line-height: 30px;
