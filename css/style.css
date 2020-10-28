@@ -173,15 +173,14 @@ a {
 
 /* Main navigation */
 
-.main-header-logo,
-.catalog-header-logo {
+.main-header-logo {
     width: 160px;
     height: 66px;
     margin: 0;
     padding: 0;
 }
 
-.catalog-header-logo:active path {
+.main-header-logo:active path {
     fill: var(--basic-gray);
 }
 
@@ -599,11 +598,11 @@ a {
     justify-content: space-between;
 }
 
-.description-list li {
+.description-item {
     position: relative;
 }
 
-.description-list li::before {
+.description-item::before {
     content: "";
     position: absolute;
     width: 25px;
@@ -724,7 +723,7 @@ a {
 .active-list::after {
     content: "";
     position: absolute;
-    width: 73px;
+    width: 74px;
     height: 2px;
     top: 118px;
     left: center;
@@ -1131,12 +1130,9 @@ a {
 .description-wrapper {
     width: 360px;
     background-color: var(--basic-neutral);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 26px 0 44px 0;
+    padding: 26px 0 49px 0;
     position: absolute;
-    top: 349px;
+    bottom: 0;
     left: 0;
     opacity: 0;
 }
@@ -1174,7 +1170,7 @@ a {
 }
 
 .purchase-button {
-    margin-top: 32px;
+    margin: 32px 0 0 80px;
     padding: 17px 72px 15px 72px;
 }
 
@@ -1263,15 +1259,10 @@ a {
 /* Footer */
 
 .contacts {
-    background-image: url("img/map.jpg");
-    width: 100%;
+    width: 1440px;
     height: 416px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-}
-
-.contacts .container {
+    margin: 0 auto;
+    padding: 0 10px;
     position: relative;
 }
 
@@ -1282,6 +1273,7 @@ a {
     background-color: var(--basic-white);
     position: absolute;
     top: 54px;
+    left: 150px;
 }
 
 .contacts h5 {
@@ -1311,7 +1303,7 @@ a {
 
 .map-marker {
     position: absolute;
-    left: 692px;
+    left: 832px;
     top: 86px;
 }
 
