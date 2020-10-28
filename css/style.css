@@ -40,6 +40,7 @@
     --basic-black: #000000;
     --basic-light-black: #283136;
     --basic-black-transparent: rgba(0, 0, 0, 0.3);
+    --basic-dark-transparent: rgba(68, 68, 68, 0.5);
     --basic-shadow: rgba(0, 0, 0, 0.4);
     --basic-extra-light-shadow: rgba(0, 1, 1, 0.1);
     --basic-light-shadow: rgba(0, 1, 1, 0.25);
@@ -69,6 +70,8 @@
     --basic-extra-dark-gray: rgba(77, 77, 77, 1);
     --basic-extra-dark-gray-transparent: rgba(77, 77, 77, 0.12);
     --basic-gray-blue: #D7DCDF;
+    --basic-light-gray-blue: #D7DCDE;
+    --basic-dark-gray-blue: #B4B9BB;
     --basic-asphalt-gray: #ABABAB;
 }
 
@@ -109,13 +112,20 @@ a {
 .container {
     width: 1160px;
     margin: 0 auto;
+    padding: 0 10px 0 10px;
 }
 
 .visually-hidden {
-    visibility: hidden;
-    width: 0;
-    height: 0;
-    margin: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 
@@ -163,9 +173,12 @@ a {
 
 /* Main navigation */
 
-.main-header-logo {
+.main-header-logo,
+.catalog-header-logo {
     width: 160px;
-    height: 65px;
+    height: 66px;
+    margin: 0;
+    padding: 0;
 }
 
 .main-navigation {
@@ -360,21 +373,24 @@ a {
 .advantages-button,
 .service-button-web,
 .contacts-button,
-.purchase-button {
+.purchase-button,
+.form-button {
     background-color: var(--basic-red);
 }
 
 .advantages-button:hover,
 .service-button-web:hover,
 .contacts-button:hover,
-.purchase-button:hover {
+.purchase-button:hover,
+.form-button:hover {
     background-color: var(--basic-dark-red);
 }
 
 .advantages-button:active,
 .service-button:active,
 .contacts-button:active,
-.purchase-button:active {
+.purchase-button:active,
+.form-button:active {
     color: var(--basic-white-transparent);
     background-color: var(--basic-extra-dark-red);
     box-shadow: inset 0px 3px 0px var(--basic-extra-light-shadow);
@@ -528,9 +544,6 @@ a {
 .description-container {
     padding: 73px 0 73px;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
 }
 
 .levels-container {
@@ -574,8 +587,8 @@ a {
 
 .description-list {
     list-style-type: none;
-    padding-left: 32px;
-    margin: 23px 0 0 0;
+    padding-left: 35px;
+    margin: 24px 0 0 0;
     min-height: 120px;
     display: flex;
     flex-direction: column;
@@ -591,7 +604,7 @@ a {
     position: absolute;
     width: 25px;
     height: 2px;
-    left: -32px;
+    left: -35px;
     top: 11px;
     background-color: var(--basic-red);
 }
@@ -716,7 +729,7 @@ a {
 
 .title-block {
     background-color: var(--basic-neutral);
-    padding-top: 7px;
+    padding-top: 5px;
     padding-bottom: 108px;
     text-align: center;
 }
@@ -748,7 +761,7 @@ a {
 }
 
 .filters .grid {
-    margin-top: 56px;
+    margin-top: 57px;
 }
 
 .filters .characteristics {
@@ -771,7 +784,7 @@ a {
 }
 
 .filter-option {
-    padding-left: 33px;
+    padding-left: 36px;
 }
 
 .filter-radio:not(:last-child) {
@@ -1093,6 +1106,13 @@ a {
     border-bottom-right-radius: 4px;
 }
 
+.sample-item img {
+    width: 359px;
+    height: 578px;
+    object-fit: contain;
+    background-color: var(--basic-neutral);
+}
+
 .sample-item {
     border-top: 40px solid var(--basic-extra-dark-gray-transparent);
     border-top-right-radius: 4px;
@@ -1248,18 +1268,20 @@ a {
 }
 
 .contacts .container {
-    display: flex;
-    justify-content: flex-start;
     position: relative;
 }
 
 .adress-container {
-    margin: 54px 0 54px 0;
-    padding: 49px 50px 50px 50px;
+    width: 219px;
+    margin: 0;
+    padding: 49px 50px 47px 50px;
     background-color: var(--basic-white);
+    position: absolute;
+    top: 54px;
 }
 
 .contacts h5 {
+    width: content;
     margin: 0;
     font-weight: bold;
     font-size: 18px;
@@ -1285,7 +1307,7 @@ a {
 
 .map-marker {
     position: absolute;
-    right: 247px;
+    left: 692px;
     top: 86px;
 }
 
@@ -1304,9 +1326,6 @@ a {
 
 .discount-container {
     padding-left: 139px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
 }
 
 .social-links-header {
@@ -1405,13 +1424,23 @@ a {
 .form-container textarea {
     box-sizing: border-box;
     margin: 9px 0 0 0;
-    color: var(--basic-dark);
-    opacity: 0.5;
+    color: var(--basic-dark-transparent);
+    border: 2px solid var(--basic-light-gray-blue);
+    border-radius: 3px;
+}
+
+.form-container input:hover,
+.form-container textarea:hover {
+    border-color: var(--basic-dark-gray-blue);
 }
 
 .form-container input:focus,
-.form-container textarea:focus {
-    opacity: 1;
+.form-container textarea:focus,
+.form-container input:active,
+.form-container textarea:active {
+    color: var(--basic-dark);
+    border-color: var(--basic-black);
+    outline: none;
 }
 
 .name-field input,
