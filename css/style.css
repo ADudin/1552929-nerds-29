@@ -238,7 +238,9 @@ a {
 }
 
 .site-navigation a:hover,
-.cart a:hover {
+.cart a:hover,
+.site-navigation a:focus,
+.cart a:focus {
     color: var(--basic-red)
 }
 
@@ -385,7 +387,12 @@ a {
 .service-button-web:hover,
 .contacts-button:hover,
 .purchase-button:hover,
-.form-button:hover {
+.form-button:hover,
+.advantages-button:focus,
+.service-button-web:focus,
+.contacts-button:focus,
+.purchase-button:focus,
+.form-button:focus {
     background-color: var(--basic-dark-red);
 }
 
@@ -426,7 +433,8 @@ a {
     background-color: var(--basic-green);
 }
 
-.service-button-apps:hover {
+.service-button-apps:hover,
+.service-button-apps:focus {
     background-color: var(--basic-dark-green);
 }
 
@@ -438,7 +446,8 @@ a {
     background-color: var(--basic-yellow);
 }
 
-.service-button-presentations:hover {
+.service-button-presentations:hover,
+.service-button-presentations:focus {
     background-color: var(--basic-dark-yellow);
 }
 
@@ -459,7 +468,8 @@ a {
     border: none;
 }
 
-.sort-button:hover {
+.sort-button:hover,
+.sort-button:focus {
     color: var(--basic-gray-transparent);
 }
 
@@ -700,7 +710,8 @@ a {
     opacity: 0.2;
 }
 
-.companies-logo-item a:hover {
+.companies-logo-item a:hover,
+.companies-logo-item a:focus {
     opacity: 1;
 }
 
@@ -890,6 +901,12 @@ a {
     opacity: 0.1;
 }
 
+.filter-input-radio:checked:focus+label::after,
+.filter-input-checkbox:focus+label::before,
+.filter-input-checkbox:checked:focus+label::after {
+    opacity: 1;
+}
+
 .filter-item legend,
 .sort-header {
     font-weight: bold;
@@ -1067,6 +1084,8 @@ a {
 .active-arrow g,
 .sort-down:hover g,
 .sort-up:hover g,
+.sort-down:focus g,
+.sort-up:focus g,
 .sort-down:active g,
 .sort-up:active g {
     opacity: 1;
@@ -1092,7 +1111,8 @@ a {
     border-radius: 4px;
 }
 
-.sample-item:hover {
+.sample-item:hover,
+.sample-item:focus {
     background-color: var(--basic-extra-dark-gray);
     box-shadow: 0px 6px 15px var(--basic-light-shadow);
 }
@@ -1136,7 +1156,8 @@ a {
     opacity: 0;
 }
 
-.sample-item:hover .description-wrapper {
+.sample-item:hover .description-wrapper,
+.sample-item:focus .description-wrapper {
     opacity: 1;
 }
 
@@ -1358,7 +1379,8 @@ a {
     align-items: center;
 }
 
-.social-link:hover {
+.social-link:hover,
+.social-link:focus {
     background: linear-gradient(0deg, var(--basic-dark-red), var(--basic-dark-red)), var(--basic-white);
 }
 
@@ -1479,7 +1501,8 @@ a {
     cursor: pointer;
 }
 
-.popup-close:hover {
+.popup-close:hover,
+.popup-close:focus {
     opacity: 1;
 }
 
