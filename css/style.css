@@ -1112,7 +1112,7 @@ a {
 }
 
 .sample-item:hover,
-.sample-item:focus {
+.sample-item:focus-within {
     background-color: var(--basic-extra-dark-gray);
     box-shadow: 0px 6px 15px var(--basic-light-shadow);
 }
@@ -1156,6 +1156,10 @@ a {
     opacity: 0;
 }
 
+.description-wrapper:focus-within {
+    opacity: 1;
+}
+
 .sample-item:hover .description-wrapper,
 .sample-item:focus .description-wrapper {
     opacity: 1;
@@ -1170,15 +1174,16 @@ a {
     margin: 0;
 }
 
-.sample-name a {
+.sample-link {
     color: var(--basic-black);
 }
 
-.sample-name a:hover {
+.sample-link:hover,
+.sample-link:focus {
     color: var(--basic-red);
 }
 
-.sample-name a:active {
+.sample-link:active {
     color: var(--basic-black-transparent);
 }
 
