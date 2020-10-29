@@ -1158,11 +1158,13 @@ a {
 
 .description-wrapper:focus-within {
     opacity: 1;
+    transition: 1s;
 }
 
 .sample-item:hover .description-wrapper,
 .sample-item:focus .description-wrapper {
     opacity: 1;
+    transition: 1s;
 }
 
 .sample-name {
