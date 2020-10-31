@@ -298,6 +298,35 @@
 
     </footer>
 
+    <section class="popup">
+
+        <h2 class="popup-header">Напишите нам</h2>
+
+        <form class="form-container" action="https://echo.htmlacademy.ru" method="post">
+
+            <div class="name-field">
+                <label for="name">Ваше имя:</label>
+                <input class="user-name" type="text" id="name" name="name" placeholder="Имя Фамилия">
+            </div>
+            <div class="email-field">
+                <label for="email">Ваш email:</label>
+                <input class="user-email" type="email" id="email" name="email" placeholder="email@example.com">
+            </div>
+            <div class="comment-field">
+                <label for="comment-field">Текст письма:</label>
+                <textarea class="user-comment" name="comment" id="comment-field" rows="1" placeholder="В свободной форме"></textarea>
+            </div>
+
+            <button class="form-button" type="submit" aria-label="Отправить сообщение в дизайн-студию «Нёрдс»">Отправить</button>
+
+        </form>
+
+        <button class="popup-close" type="button" aria-label="Закрыть"></button>
+
+    </section>
+
+    <script src="js/contact.js"></script>
+
 </body>
 
 </html>
