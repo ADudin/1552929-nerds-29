@@ -1491,6 +1491,11 @@ a {
     padding: 16px 414px 84px 16px;
 }
 
+.form-container .invalid {
+    color: var(--basic-dark-red);
+    border-color: var(--basic-dark-red);
+}
+
 .form-button {
     font-weight: 500;
     line-height: 18px;
