@@ -92,39 +92,28 @@ window.addEventListener("keydown", function(evt) {
 
 /* Slider */
 
-const firstSlide = document.querySelector(".first-slide");
-const secondSlide = document.querySelector(".second-slide");
-const thirdSlide = document.querySelector(".third-slide");
-const buttonFirstSlide = document.querySelector(".button-first-slide");
-const buttonSecondSlide = document.querySelector(".button-second-slide");
-const buttonThirdSlide = document.querySelector(".button-third-slide");
+let slideIndex = 1;
+showSlides(slideIndex);
 
-buttonFirstSlide.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    firstSlide.classList.add("slide-current");
-    secondSlide.classList.remove("slide-current");
-    thirdSlide.classList.remove("slide-current");
-    buttonFirstSlide.classList.add("current");
-    buttonSecondSlide.classList.remove("current");
-    buttonThirdSlide.classList.remove("current");
-});
+function plusSlide() {
+    showSlides(slideIndex += 1);
+}
 
-buttonSecondSlide.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    firstSlide.classList.remove("slide-current");
-    secondSlide.classList.add("slide-current");
-    thirdSlide.classList.remove("slide-current");
-    buttonFirstSlide.classList.remove("current");
-    buttonSecondSlide.classList.add("current");
-    buttonThirdSlide.classList.remove("current");
-});
+function minusSlide() {
+    showSlides(slideIndex -= 1);
+}
 
-buttonThirdSlide.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    firstSlide.classList.remove("slide-current");
-    secondSlide.classList.remove("slide-current");
-    thirdSlide.classList.add("slide-current");
-    buttonFirstSlide.classList.remove("current");
-    buttonSecondSlide.classList.remove("current");
-    buttonThirdSlide.classList.add("current");
-});
+function currentSlide(n) {
+    showSlides(slideIndex = n)
+}
+
+function showSlides(n) {
+    let slides = document.getElementsByClassName("slide");
+    let dots = document.getElementsByClassName("slider-button");
+    if (n > slides.length) { slideIndex = 1 };
+    if (n < 1) { slideIndex = slides.length };
+    for (let i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+    for (let i = 0; i < dots.length; i++) { dots[i].className.replace(" current", "") };
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " current";
+};

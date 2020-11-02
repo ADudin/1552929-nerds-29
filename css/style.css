@@ -347,7 +347,9 @@ a {
     cursor: pointer;
 }
 
-.slider-controls .current::before {
+.slider-controls .current:hover::before,
+.slider-controls .current:focus::before,
+.slider-controls .current:active::before {
     content: "";
     width: 8px;
     height: 8px;
@@ -1291,6 +1293,15 @@ a {
     margin: 0 auto;
     padding: 0 10px;
     position: relative;
+    background-image: url("img/map.jpg");
+    background-repeat: no-repeat;
+}
+
+.contacts iframe {
+    border: none;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 .adress-container {
@@ -1326,18 +1337,6 @@ a {
 .contacts-button {
     padding: 17px 44px 15px 44px;
     margin: 37px 0 0 0;
-}
-
-.map-marker {
-    position: absolute;
-    left: 832px;
-    top: 86px;
-}
-
-.map-marker img {
-    width: 231;
-    height: 190px;
-    object-fit: contain;
 }
 
 .social-container {
