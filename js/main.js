@@ -18,7 +18,6 @@ try {
 contactsButton.addEventListener("click", function(evt) {
     evt.preventDefault();
     popup.classList.add("popup-show");
-
     if (storage) {
         userName.value = storage;
         userEmail.value = storage;
@@ -26,53 +25,23 @@ contactsButton.addEventListener("click", function(evt) {
     } else {
         userName.focus();
     }
-
 });
 
 popupClose.addEventListener("click", function(evt) {
     evt.preventDefault();
     popup.classList.remove("popup-show");
     popup.classList.remove("popup-error");
-    userName.classList.remove("invalid");
-    userEmail.classList.remove("invalid");
-    userComment.classList.remove("invalid");
 });
 
 formContainer.addEventListener("submit", function(evt) {
-    if (!userName.value) {
+    if (!userName.value || !userEmail.value || !userComment.value) {
         evt.preventDefault();
         popup.classList.remove("popup-error");
-        userName.classList.remove("invalid");
         popup.offsetWidth = popup.offsetWidth;
         popup.classList.add("popup-error");
-        userName.classList.add("invalid");
-        userEmail.classList.remove("invalid");
-        userComment.classList.remove("invalid");
     } else {
-        if (!userEmail.value) {
-            evt.preventDefault();
-            popup.classList.remove("popup-error");
-            userEmail.classList.remove("invalid");
-            popup.offsetWidth = popup.offsetWidth;
-            popup.classList.add("popup-error");
-            userEmail.classList.add("invalid");
-            userName.classList.remove("invalid");
-            userComment.classList.remove("invalid");
-        } else {
-            if (!userComment.value) {
-                evt.preventDefault();
-                popup.classList.remove("popup-error");
-                userComment.classList.remove("invalid");
-                popup.offsetWidth = popup.offsetWidth;
-                popup.classList.add("popup-error");
-                userComment.classList.add("invalid");
-                userName.classList.remove("invalid");
-                userEmail.classList.remove("invalid");
-            } else {
-                if (isStorageSupport) {
-                    localStorage.setItem("comment", userName.value, userEmail.value);
-                }
-            }
+        if (isStorageSupport) {
+            localStorage.setItem("comment", userName.value, userEmail.value);
         }
     }
 });
@@ -83,9 +52,6 @@ window.addEventListener("keydown", function(evt) {
             evt.preventDefault();
             popup.classList.remove("popup-show");
             popup.classList.remove("popup-error");
-            userName.classList.remove("invalid");
-            userEmail.classList.remove("invalid");
-            userComment.classList.remove("invalid");
         }
     }
 });
@@ -112,8 +78,8 @@ function showSlides(n) {
     let dots = document.getElementsByClassName("slider-button");
     if (n > slides.length) { slideIndex = 1 };
     if (n < 1) { slideIndex = slides.length };
-    for (let i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
-    for (let i = 0; i < dots.length; i++) { dots[i].className.replace(" current", "") };
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " current";
+    for (let i = 0; i < slides.length; i++) { slides[i].classList.remove("slide-current"); }
+    for (let i = 0; i < dots.length; i++) { dots[i].classList.remove("current") };
+    slides[slideIndex - 1].classList.add("slide-current");
+    dots[slideIndex - 1].classList.add("current");
 };
