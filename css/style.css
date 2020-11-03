@@ -190,6 +190,7 @@ a {
 .main-navigation {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
     width: 100%;
     margin-bottom: 9px;
     margin-left: 202px;
@@ -737,11 +738,15 @@ a {
 
 /* Catalog */
 
+.active-list {
+    position: relative;
+}
+
 .active-list::after {
     content: "";
     position: absolute;
-    top: 118px;
-    left: 907px;
+    top: 42px;
+    left: 1px;
     width: 74px;
     height: 2px;
     background-color: var(--basic-red);
@@ -818,6 +823,7 @@ a {
 .filter-option label {
     position: relative;
     display: inline-block;
+    vertical-align: middle;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -902,11 +908,18 @@ a {
     opacity: 1;
 }
 
-.filter-input-radio+label:disabled::before,
-.filter-input-radio:checked+label:disabled::after,
-.filter-input-checkbox+label:disabled::before,
-.filter-input-checkbox:checked+label:disabled::after {
+.filter-input-radio:disabled+label::before,
+.filter-input-radio:checked:disabled+label::after,
+.filter-input-checkbox:disabled+label::before,
+.filter-input-checkbox:checked:disabled+label::after {
     opacity: 0.1;
+}
+
+.filter-input-radio:disabled+label,
+.filter-input-radio:checked:disabled+label,
+.filter-input-checkbox:disabled+label,
+.filter-input-checkbox:checked:disabled+label {
+    opacity: 0.3;
 }
 
 .filter-input-radio:checked:focus+label::after,
@@ -1026,6 +1039,7 @@ a {
     min-height: 50px;
     margin-top: 20px;
     padding: 0;
+    vertical-align: middle;
     text-align: center;
     background-color: var(--basic-neutral);
 }
@@ -1232,6 +1246,7 @@ a {
 .pagination-item a,
 .pagination-button {
     display: inline-block;
+    vertical-align: middle;
 }
 
 .pagination-item a {
@@ -1299,7 +1314,6 @@ a {
     width: 1440px;
     height: 416px;
     margin: 0 auto;
-    padding: 0 10px;
 }
 
 .contacts img,
@@ -1345,6 +1359,7 @@ a {
     display: inline-block;
     margin: 37px 0 0 0;
     padding: 17px 44px 15px 44px;
+    vertical-align: middle;
 }
 
 .social-container {
