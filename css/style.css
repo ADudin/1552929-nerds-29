@@ -1311,16 +1311,16 @@ a {
 
 .contacts {
     position: relative;
-    width: 1440px;
     height: 416px;
     margin: 0 auto;
+    text-align: center;
+    background-image: url("../img/map.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.contacts img,
 .contacts iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
+    max-width: 100%;
     border: none;
     -o-object-fit: contain;
     object-fit: contain;
@@ -1329,10 +1329,11 @@ a {
 .adress-container {
     position: absolute;
     top: 54px;
-    left: 150px;
+    left: auto;
     width: 219px;
     margin: 0;
     padding: 49px 50px 47px 50px;
+    text-align: start;
     background-color: var(--basic-white);
 }
 
