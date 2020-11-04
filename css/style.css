@@ -53,13 +53,15 @@
     --basic-dark-gray-blue: #b4b9bb;
     --basic-dark-green: #00bc6c;
     --basic-dark-red: #e74246;
+    --basic-dark-shadow: rgba(0, 0, 0, 0.4);
     --basic-dark-transparent: rgba(68, 68, 68, 0.5);
     --basic-dark-yellow: #eab534;
     --basic-extra-dark: #283136;
-    --basic-extra-dark-gray: rgba(77, 77, 77, 1);
+    --basic-extra-dark-gray: #4d4d4d;
     --basic-extra-dark-gray-transparent: rgba(77, 77, 77, 0.12);
     --basic-extra-dark-green: #00aa62;
     --basic-extra-dark-red: #d7373b;
+    --basic-extra-dark-yellow: #e5a722;
     --basic-extra-light-gray: #dfdfdf;
     --basic-extra-light-shadow: rgba(0, 1, 1, 0.1);
     --basic-gray: rgba(166, 166, 166, 1);
@@ -75,12 +77,10 @@
     --basic-neutral-dark: #e1e1e1;
     --basic-neutral-extra-dark: #dbdbdb;
     --basic-red: #fb565a;
-    --basic-shadow: rgba(0, 0, 0, 0.4);
     --basic-shadow: rgba(0, 0, 0, 0.15);
     --basic-white: #ffffff;
     --basic-white-transparent: rgba(255, 255, 255, 0.3);
     --basic-yellow: #efc849;
-    --basik-extra-dark-yellow: #e5a722;
 }
 
 
@@ -458,7 +458,7 @@ a {
 }
 
 .service-button-presentations:active {
-    background-color: var(--basik-extra-dark-yellow);
+    background-color: var(--basic-extra-dark-yellow);
 }
 
 
@@ -1439,7 +1439,7 @@ a {
     margin: auto;
     padding: 63px 99px 84px 100px;
     background-color: var(--basic-white);
-    box-shadow: 0 20px 40px var(--basic-shadow);
+    box-shadow: 0 20px 40px var(--basic-dark-shadow);
 }
 
 .popup-show {
